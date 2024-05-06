@@ -1,0 +1,481 @@
+:root {
+    --primary: #f20808;
+    --background: #f7f4f4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: #f7f5f5;
+    min-height: 3000px;
+
+}
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(247, 244, 244, 0.8);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f20808;
+    font-style: bold;
+
+}
+
+.navbar .navbar-nav a {
+    color: #070707;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 1rem;
+
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var (--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #f20808;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary)
+}
+
+#hamburger-menu {
+    display: none
+}
+
+/*Hero Section*/
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/mega-caesaria-eZtqoZEaG4E-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+/*problem 1*/
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(254, 3, 83, 0.8) 8%, rgba(248, 248, 5, 0.5) 50%);
+    z-index: -1;
+}
+
+.hero.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    max-width: 60rem;
+    margin-left: -30;
+    /* Geser ke kiri sejauh 30% dari lebar konten */
+    margin-right: -30%;
+}
+
+.content h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    margin-left: 30%;
+    margin-top: 0.1rem;
+    text-shadow: 1px 1px 3px rgba(1, 0, 0, 0.8);
+
+}
+
+.content p {
+    font-family: 'Poppins' sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.1rem;
+    margin-left: 30%;
+    line-height: 1.4;
+    font-weight: 0;
+    text-shadow: 1px 1px 3px rgba(1, 0, 0, 0.8);
+}
+
+.content a {
+    font-family: 'Poppins' sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    margin-left: 30%;
+    color: #f7f4f4;
+    text-shadow: 1px 1px 3px rgba(1, 0, 0, 0.8);
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #f20808;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 0, 0, 0.5);
+}
+
+.about,
+.menu {
+    padding: 10rem 7% 1.4rem;
+    color: #070707;
+}
+
+.about h2,
+.menu h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+    font-style: bold;
+
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 50;
+    line-height: 1.6;
+}
+
+.about .row .content {
+    padding: 0;
+}
+
+.about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.menu {
+    text-align: center;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.menu h2 {
+    margin-bottom: 20px;
+}
+
+.menu p {
+    margin-bottom: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-card {
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-card-img {
+    border-radius: 15%;
+    width: 100%;
+    /* Ubah lebar gambar menjadi 100% */
+    height: auto;
+    /* Biarkan ketinggian gambar menyesuaikan proporsi aslinya */
+    margin: 0 auto;
+    display: block;
+}
+
+.menu-card-details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.menu-card-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-card-list li {
+    margin-bottom: 8px;
+}
+
+.menu-card-price {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-card-price li {
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+/*Contact Section*/
+
+.contact {
+    padding: 10rem 7% 1.4rem;
+    color: #070707;
+}
+
+.contact {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+}
+
+.contact .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #757575;
+
+}
+
+.contact .row .maps {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+
+
+}
+
+.contact .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--background);
+    border: 1px solid #ff0000;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    background: none;
+    color: #ff0000;
+}
+
+.contact .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    color: #fff;
+}
+
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+
+}
+
+footer .credit a {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/*Media Queries*/
+
+/*Laptop*/
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+
+    }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+
+    .contact .row {
+        flex-wrap: wrap;
+    }
+
+    .contact .row .maps {
+        height: 30rem;
+    }
+
+    .contact .row form {
+        padding-top: 0;
+    }
+
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #f20808;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--background);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform-origin: scaleX(0.2);
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .about-img img {
+        height: 15rem;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+/*Menu Section */
+.menu h2 {
+    margin-bottom: 1rem;
+
+}
+
+.menu p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.2rem;
+}
+
+
+/*Mobile Phone*/
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+}
